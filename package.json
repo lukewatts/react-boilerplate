@@ -1,0 +1,26 @@
+{
+  "name": "react-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^8.2.0",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^0.5.1"
+  },
+  "scripts": {
+    "init:tailwind": "./node_modules/.bin/tailwind init tailwind.js",
+    "start:tailwind": "./node_modules/.bin/tailwind build src/index.css -c ./tailwind.js -o ./public/assets/css/main.css",
+    "start:react": "react-scripts start",
+    "build:react": "react-scripts build",
+    "start": "npm-run-all -p start:tailwind start:react",
+    "build": "npm-run-all start:tailwind build:react",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
